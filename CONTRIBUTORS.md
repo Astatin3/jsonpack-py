@@ -7,3 +7,4 @@
 * Devin Weaver ([sukima](https://github.com/sukima))
 * Craig Andrews ([candrews](https://github.com/candrews))
 * Oleg Sklyanchuk ([olegskl](https://github.com/olegskl))
+* astatin3 ([astatin3](https://github.com/astatin3))
