@@ -1,5 +1,4 @@
-
-A compression algorithm for JSON
+A compression algorithm for JSON, converted to Python
 
 ## Notes
 
@@ -16,6 +15,9 @@ It can compress to 55% of original size if the data has a recursive structure, e
 [Earthquake GeoJSON](http://earthquake.usgs.gov/earthquakes/feed/geojson/2.5/month) or 
 [Twitter API](http://search.twitter.com/search.json?q=Twitter%20API&result_type=mixed). 
 
+Install via:
+> $ pip install jsonpackpy
+
 ### jsonpack.pack(json)
 Retrieve a packed representation of the json
 
@@ -31,7 +33,7 @@ Retrieve a packed representation of the json
 #### Example
 
 ```python
-import jsonpack
+import jsonpackpy as jpy
 
 json = {
  	'type': 'world',
@@ -53,7 +55,7 @@ json = {
  	}]
  };
  	
- packed = jsonpack.pack(json)
+ packed = jpy.pack(json)
  
  print(packed)
  # print:
@@ -76,20 +78,16 @@ Unpack the data in the *packed* parameter
 * Example 3: Browser
 
 ```python
-import jsonpack
+import jsonpackpy as jpy
 
 packed = "type|world|name|earth|children|continent|America|country|Chile|commune|Antofagasta|Europe^^^$0|1|2|3|4|@$0|5|2|6|4|@$0|7|2|8|4|@$0|9|2|A]]]]]|$0|5|2|B]]]" 
 
 # unpack the packed to a clone of the original JSON 	
-json = jsonpack.unpack(packed);
+json = jpy.unpack(packed);
  
 print(json);
  
 ```
-
-## FAQ
-
-The icon is a generic (LGPL) icon by David Vignoni - http://www.icon-king.com/
 
 ## LICENCE
 
@@ -101,8 +99,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[cpm]: https://github.org/kriszyp/cpm
-[volo]: http://volojs.org/
-[npm]: http://npmjs.org/
-[download]: https://github.com/sapienlab/jsonpack/archive/master.zip
